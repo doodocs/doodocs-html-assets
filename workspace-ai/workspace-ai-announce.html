@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light dark" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+      /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+      body {
+        background-color: #f5f5f5;
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+      }
+
+      table {
+        border-collapse: separate;
+        width: 100%;
+      }
+
+      table td {
+        vertical-align: top;
+      }
+
+      hr {
+        background-color: #ededec;
+        height: 1px;
+        border: 0;
+        margin: 32px 0 24px 0;
+      }
+
+      span,
+      p,
+      ul,
+      ol,
+      li,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        color: #282a2f !important;
+      }
+
+      a {
+        color: #0085ff !important;
+        text-decoration: underline;
+      }
+
+      a,
+      p,
+      ul,
+      ol,
+      li {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 32px;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+      }
+
+      /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+      .body {
+        background-color: #f5f5f5;
+        width: 100%;
+      }
+
+      .container {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto !important;
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+
+      .container__header {
+        padding: 24px 24px 0 24px;
+        border-radius: 4px 4px 0px 0px;
+      }
+
+      .container__content {
+        padding: 32px 24px;
+      }
+
+      .container__footer {
+        padding: 48px 24px;
+        border-radius: 0px 0px 4px 4px;
+      }
+
+      .container__header,
+      .container__content,
+      .container__footer {
+        display: block;
+        box-sizing: border-box;
+        margin: 0 auto !important;
+        background-color: #ffffff !important;
+        max-width: 576px !important;
+      }
+
+      /* --------------------------------
+          Buttons
+      ----------------------------------- */
+
+      .btn {
+        box-sizing: border-box;
+        display: inline-block;
+
+        color: #fff !important;
+        padding: 7px 16px;
+        text-decoration: none;
+        border-radius: 4px;
+        background-color: #0085ff;
+        border: 1px solid #1272cc;
+      }
+      .btn:hover {
+        background-color: #339dff;
+      }
+      .btn:active {
+        background-color: #1272cc;
+      }
+
+      /* --------------------------------
+          MAIN STYLES
+      ---------------------------------- */
+      .br-8,
+      .br-12,
+      .br-24,
+      .br-32 {
+        content: " " !important;
+        display: block !important;
+        overflow: hidden !important;
+      }
+      .br-8 {
+        line-height: 8px !important;
+        height: 8px !important;
+      }
+      .br-12 {
+        line-height: 12px !important;
+        height: 12px !important;
+      }
+      .br-24 {
+        line-height: 24px !important;
+        height: 24px !important;
+      }
+      .br-32 {
+        line-height: 32px !important;
+        height: 32px !important;
+      }
+
+      .border-rounded {
+        border-radius: 4px;
+      }
+
+      .background-color-secondary {
+        background-color: #f5f5f5 !important;
+      }
+
+      .color-text {
+        color: #282a2f !important;
+      }
+
+      .color-secondary {
+        color: #90959d !important;
+      }
+
+      .color-link {
+        color: #0085ff !important;
+      }
+
+      .text-normal {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        font-weight: 400 !important;
+      }
+
+      .text-small {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        font-weight: 400 !important;
+      }
+
+      .text-center {
+        text-align: center !important;
+      }
+
+      .font-weight-500 {
+        font-weight: 500 !important;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        /* Dark mode styles */
+      }
+
+      @media only screen and (max-width: 620px) {
+        .container {
+          max-width: none;
+          padding: 0;
+          width: auto;
+        }
+      }
+      .center {
+      display: block;
+      margin-left: auto;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      margin-right: auto;
+      /*width: 50%;*/
+    }    
+    </style>
+
+    <title>doodocs.kz</title>
+  </head>
+
+  <body>
+    <table
+      role="presentation"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      class="body"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <div class="container">
+              <div class="container__header">
+                <table
+                  role="presentation"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a
+                          href="https://doodocs.kz"
+                          style="display: inline-block"
+                          target="_blank"
+                        >
+                          <img
+                            alt="logo-text"
+                            height="28px"
+                            src="https://raw.githubusercontent.com/doodocs/doodocs-assets/master/icons/logo-text-v1.png"
+                            border="0"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="container__content">
+                <h1>Начните работу с документами по-новому</h1>
+                      
+                <p>В Doodocs.kz мы верим в безграничные возможности технологий для упрощения работы с документами. Сегодня, мы на шаг ближе к реализации этой миссии, представляя вам новые возможности Doodocs.</p>
+                <span class="br-12"></span>
+
+                <h2>Doodocs AI приветствует вас!</h2>
+                <p>Представьте себе сотрудника, который никогда не устает, знает каждую деталь ваших документов и всегда готов создать новый документ по вашему запросу. Это не сюжет фантастического фильма, а наша новая реальность, которую уже сейчас вы можете попробовать с Doodocs AI.</p>
+
+                <img src="https://raw.githubusercontent.com/doodocs/doodocs-assets/main/workspace-ai/min/document-ai-1.png" class="center"/>
+
+                <p>Doodocs AI это не просто инструмент, работающий на основе ChatGPT – это ваш цифровой партнер, помощник и советник, который использует AI для генерации документов и консультаций в формате чата.</p>
+
+                <img src="https://raw.githubusercontent.com/doodocs/doodocs-assets/main/workspace-ai/min/document-ai-2.png" class="center" style="width: 75%"/>                
+
+                <p>Doodocs AI поможет вам создавать документы, не тратя время на рутину. Общайтесь с AI, как с настоящим сотрудником, и он подготовит документ согласно вашим указаниям.</p>
+
+                <img src="https://raw.githubusercontent.com/doodocs/doodocs-assets/main/workspace-ai/min/document-ai-3.png" class="center" style="width: 75%"/>                
+
+                <p>Документы могут быть сложными и запутанными, но не с Doodocs AI. Допустим, вы не уверены в назначении определенного пункта контракта. Просто задайте вопрос AI, и он предоставит вам подробное объяснение.</p>
+
+                <span class="br-24"></span>
+                <a href="https://cabinet.doodocs.kz" target="_blank" class="btn"
+                  >Попробовать Doodocs AI</a
+                >
+                <span class="br-24"></span>
+
+                <h2>Пространства – ваш новый офис в Doodocs</h2>
+                <p>Представьте, что вся ваша команда может объединиться в одном рабочем пространстве и разделить его по группам. HR, бухгалтерия, маркетинг - каждая команда может иметь свой мини-офис для документов и рабочий процесс.</p>
+                <img src="https://raw.githubusercontent.com/doodocs/doodocs-assets/main/workspace-ai/min/workspace-3.png" class="center"/>
+                <p>Пространства - это новый способ организации вашей работы с документами в Doodocs.kz. Все ваши команды теперь могут работать совместно в одном рабочем пространстве, создавая группы для управления своими документами.</p>
+                <img src="https://raw.githubusercontent.com/doodocs/doodocs-assets/main/workspace-ai/min/workspace-2.png" class="center" style="width: 60%"/>
+                <p>Пространства Doodocs позволяют вам и вашим коллегам эффективно сотрудничать, предоставляя общую зону для работы над документами и проектами.</p>
+                <!-- <img src="workspace-3.png" class="center" style="width: 80%"/> -->
+                
+                <span class="br-24"></span>
+
+                <h2>Новый редактор документов</h2>
+                <img src="https://raw.githubusercontent.com/doodocs/doodocs-assets/main/workspace-ai/min/editor-1.png" class="center"/>
+                <p> Мы переосмыслили процесс создания и редактирования документов, делая его более удобным и функциональным. Новый редактор предлагает полный набор инструментов для создания и редактирования документов. Теперь ваши идеи будут ещё более ясными, а работа - продуктивной.</p>
+
+                <span class="br-24"></span>
+
+                <h2>Обновленные тарифы</h2>
+                <p>Теперь в Doodocs вы платите только за тех пользователей, кто создает и отправляет документы. Если вы работаете в пространстве, подписываете и согласовываете документы, но не создаете их, то можете пользоваться сервисом бесплатно.</p>
+                
+                <span class="br-24"></span>
+                <a href="https://doodocs.kz" target="_blank" class="btn"
+                  >Перейти в Doodocs</a
+                >
+                <span class="br-24"></span>
+                <!-- /template: invite-email -->
+              </div>
+              <div class="container__footer">
+                <table
+                  role="presentation"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a
+                          href="https://doodocs.kz"
+                          style="display: inline-block"
+                          target="_blank"
+                        >
+                          <img
+                            alt="logo"
+                            height="24px"
+                            src="https://raw.githubusercontent.com/doodocs/doodocs-assets/master/icons/logo-v1.png"
+                            border="0"
+                          />
+                        </a>
+                        <span class="br-8"></span>
+                        <div>
+                          <p class="text-small">Doodocs.kz</p>
+                          <p class="text-small">Document. Like never before.</p>
+                        </div>
+                        <span class="br-32"></span>
+                        <div>
+                          <p class="color-secondary text-small">
+                            Если у вас есть какие-либо пожелания, замечания или
+                            предложения, с радостью ждем их по адресу
+                            <a
+                              href="mailto:info@doodocs.kz"
+                              class="color-secondary text-small"
+                              >info@doodocs.kz</a
+                            >
+                          </p>
+                        </div>
+                        <span class="br-32"></span>
+                        <div>
+                          <table
+                            cellspacing="0"
+                            cellpadding="0"
+                            border="0"
+                            style="width: auto"
+                          >
+                            <tbody>
+                              <tr>
+                                <td style="padding-right: 16px">
+                                  <a
+                                    href="https://t.me/doodocskz"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      height="20px"
+                                      width="20px"
+                                      src="https://raw.githubusercontent.com/doodocs/doodocs-assets/master/icons/soc-telegram-v1-gray.png"
+                                      alt="soc-telegram"
+                                    />
+                                  </a>
+                                </td>
+                                <td style="padding-right: 16px">
+                                  <a
+                                    href="https://www.linkedin.com/company/doodocs"
+                                    target="_blank"
+                                    ><img
+                                      height="20px"
+                                      width="20px"
+                                      src="https://raw.githubusercontent.com/doodocs/doodocs-assets/master/icons/soc-linkedin-v1-gray.png"
+                                      alt="soc-linkedin"
+                                  /></a>
+                                </td>
+                                <td style="padding-right: 16px">
+                                  <a
+                                    href="https://www.facebook.com/profile.php?id=100090917156867"
+                                    target="_blank"
+                                    ><img
+                                      height="20px"
+                                      width="20px"
+                                      src="https://raw.githubusercontent.com/doodocs/doodocs-assets/master/icons/soc-facebook-v1-gray.png"
+                                      alt="soc-facebook"
+                                  /></a>
+                                </td>
+                                <td style="padding-right: 16px">
+                                  <a
+                                    href="https://www.instagram.com/doodocs.kz"
+                                    target="_blank"
+                                    ><img
+                                      height="20px"
+                                      width="20px"
+                                      src="https://raw.githubusercontent.com/doodocs/doodocs-assets/master/icons/soc-instagram-v1-gray.png"
+                                      alt="soc-instagram"
+                                  /></a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--
+                          <span class="br-32"></span>
+                        <div>
+                      <a href="#" class="color-secondary text-small"
+                        >Отписаться</a
+                      >
+                    </div> -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
